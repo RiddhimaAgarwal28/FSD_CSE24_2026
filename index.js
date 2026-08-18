@@ -57,3 +57,13 @@ function loginHandler(username,password,clbk){
     }
 }
 loginHandler("RiddhimaAgarwal28","Ridd@2006",login)*/
+
+//Synchronous function
+/*console.log("One");
+console.log("Two");
+console.log("Three");*/
+
+//Asynchronous Function
+console.log("One")
+setTimeout(()=>{console.log("Two")},1000)
+console.log("Three")
