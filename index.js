@@ -64,6 +64,26 @@ console.log("Two");
 console.log("Three");*/
 
 //Asynchronous Function
-console.log("One")
-setTimeout(()=>{console.log("Two")},1000)
-console.log("Three")
+/*console.log("One")
+for(i=0;i<10000;i++){
+    console.log("i="+i)
+}
+//setTimeout(()=>{console.log("Two")},1000)
+console.log("Three")*/
+
+const container = document.getElementById('container')
+const button=document.getElementById('btn');
+
+const h1=document.createElement('h1')
+console.log(h1)
+h1.innerText='ABES Engineering College';
+//console.log(button)
+//console.log(container)
+
+function ping() {
+    // alert('server ping')
+    container.innerHTML='<h2>Welcome to DOM</h2>'
+    container.appendChild(h1)
+}
+
+button.addEventListener('click',ping);
