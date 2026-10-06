@@ -9,6 +9,8 @@ import MyState from './components/MyState'
 import ColorChange from './components/ColorChange'
 import NameChange from './components/NameChange'
 import ImageManipulation from './components/ImageManipulation'
+import MyUseEffect from './components/MyUseEffect'
+import FetchProducts from './components/FetchProducts'
 
 
 function App() {
@@ -28,9 +30,11 @@ function App() {
       <ICardGallery />
       <ICardGallery/>
       <MyState/>
-      <NameChange/>*/}
+      <NameChange/>
       <ImageManipulation/>
-    </div>
+      <MyUseEffect/>*/}
+      <FetchProducts/>
+      </div>
   )
 }
 
