@@ -11,15 +11,30 @@ import NameChange from './components/NameChange'
 import ImageManipulation from './components/ImageManipulation'
 import MyUseEffect from './components/MyUseEffect'
 import FetchProducts from './components/FetchProducts'
-
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Login from './components/Login'
+import Registration from './components/Registration'
+import Dashboard from './components/Dashboard'
+import Home from './components/Home'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div style={{border:'2px solid red', width:'1000px', height:'1000px'}}>
-    <h2 style={{color:'red'}}>Welcome to React App Development</h2>
-    {/*<div style={{border:'8px solid purple', width:'500px', height:'1620px'}}>
+    <div>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/login' element={<Login/>}></Route>
+        <Route path='/register' element={<Registration/>}></Route>
+        <Route path='/dashboard' element={<Dashboard/>}></Route>
+        <Route path='/' element={<Home/>}></Route>
+      </Routes>
+      </BrowserRouter>
+    </div>
+  )
+}
+    {/*<div style={{border:'2px solid pink', width:'1000px', height:'100%'}}>
+    <h2 style={{color:'violet'}}>Welcome to React App Development</h2>
+    <div style={{border:'8px solid purple', width:'500px', height:'1620px'}}>
     <h2 style={{color:'red'}}>Welcome to React App Development</h2>
     <h2 style={{color:'blue'}}>ABES Engineering College</h2>
     <h2 style={{color:'pink'}}>Name : Riddhima Agarwal</h2>
@@ -31,11 +46,8 @@ function App() {
       <ICardGallery/>
       <MyState/>
       <NameChange/>
-      <ImageManipulation/>
-      <MyUseEffect/>*/}
+      <ImageManipulation/>`
+      <MyUseEffect/>
       <FetchProducts/>
-      </div>
-  )
-}
-
+      </div>*/}
 export default App
